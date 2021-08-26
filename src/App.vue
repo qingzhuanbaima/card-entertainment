@@ -18,7 +18,7 @@
 						<navi-bar-item></navi-bar-item>
 					</div>
 					<div class="nav-search">
-						<input  type="text" name="" id="" value="" placeholder="请输入卡牌名称进行查询" />
+						<input type="text" name="" id="" value="" placeholder="请输入卡牌名称进行查询" />
 						<button type="button"><img src="./assets/game_img/search.png"></button>
 					</div>
 				</div>
@@ -104,13 +104,16 @@
 					flex: 1;
 					text-align: center;
 				}
-				.nav-title{
+
+				.nav-title {
 					display: flex;
 				}
-				.nav-search{
+
+				.nav-search {
 					display: flex;
 					float: right;
 				}
+
 				input {
 					-webkit-appearance: none;
 					outline: none;
@@ -166,7 +169,7 @@
 				// height: 2000px;
 				margin: 0 auto;
 				min-height: calc(100%-100px);
-				background-color: rgba(0, 0, 0, 0.5);
+				background-color: rgba(255, 255, 255, 1);
 
 				.footer {
 					height: 100px;
