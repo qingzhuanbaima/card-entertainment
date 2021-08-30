@@ -11,11 +11,21 @@
 				</div>
 				<div class="nav">
 					<div class="nav-title">
-						<navi-bar-item></navi-bar-item>
-						<navi-bar-item></navi-bar-item>
-						<navi-bar-item></navi-bar-item>
-						<navi-bar-item></navi-bar-item>
-						<navi-bar-item></navi-bar-item>
+						<router-link to="/home">
+							<navi-bar-item pageName="首页"></navi-bar-item>
+						</router-link>
+						<router-link to="/information">
+							<navi-bar-item pageName="白狼资讯"></navi-bar-item>
+						</router-link>
+						<router-link to="/connect">
+							<navi-bar-item pageName="预约联系"></navi-bar-item>
+						</router-link>
+						<router-link to="/agent">
+							<navi-bar-item pageName="全国代理"></navi-bar-item>
+						</router-link>
+						<router-link to="/introduction">
+							<navi-bar-item pageName="公司简介"></navi-bar-item>
+						</router-link>
 					</div>
 					<div class="nav-search">
 						<input type="text" name="" id="" value="" placeholder="请输入卡牌名称进行查询" />
@@ -58,6 +68,9 @@
 	}
 </script>
 <style lang="scss">
+	.active{
+		color: #ffffff;
+	}
 	#index {
 		width: 100%;
 		height: 100%;
@@ -73,14 +86,16 @@
 			display: flex;
 			height: 80px;
 			width: 100%;
-			background-color: #343a40;
+			// background-color: #343a40;
+			background-color: #c5b7bd;
 			position: sticky;
 			top: 0;
+			z-index: 20;
 
 			// background: url(./assets/logo.png) no-repeat;
 			.logo {
 				display: flex;
-
+				width: 20%;
 				img {
 					width: 64px;
 					height: 64px;
@@ -97,11 +112,11 @@
 
 			.nav {
 				display: flex;
-				width: 75%;
+				width: 60%;
 				justify-content: space-between;
 
 				div {
-					flex: 1;
+					// flex: 1;
 					text-align: center;
 				}
 
@@ -162,9 +177,10 @@
 		#index-container {
 			display: flex;
 			flex-grow: 1;
+			z-index: 0;
 
 			.main {
-				width: 75%;
+				width: 60%;
 				position: relative;
 				// height: 2000px;
 				margin: 0 auto;

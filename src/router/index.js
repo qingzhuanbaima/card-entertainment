@@ -9,7 +9,7 @@ import Information from '../views/Information.vue'
 import Introduction from '../views/Introduction.vue'
 
 const routes = [{
-  path: '/',
+  path: '/home',
   name: 'Home',
   component: Home
  },
@@ -57,7 +57,8 @@ const routes = [{
 
 const router = createRouter({
  history: createWebHistory(process.env.BASE_URL),
- routes
+ routes,
+ linkActiveClass:'active'
 })
 
 export default router
