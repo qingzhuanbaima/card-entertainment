@@ -2,7 +2,13 @@
 	<div>
 		<!-- <router-link to="/">Home</router-link> |
 		<router-link to="/about">About</router-link> -->
-		<background-star></background-star>
+		<!-- <background-star></background-star> -->
+		<div id="navigation-container">
+			<div class="navigation-item">
+				<img src="./assets/game_img/hearthStone.png" >
+				<span>联系我们</span>
+			</div>
+		</div>
 		<div id="index">
 			<div id="index-header">
 				<div class="logo">
@@ -68,9 +74,10 @@
 	}
 </script>
 <style lang="scss">
-	.active{
+	.active {
 		color: #ffffff;
 	}
+
 	#index {
 		width: 100%;
 		height: 100%;
@@ -96,6 +103,7 @@
 			.logo {
 				display: flex;
 				width: 20%;
+
 				img {
 					width: 64px;
 					height: 64px;
@@ -178,6 +186,7 @@
 			display: flex;
 			flex-grow: 1;
 			z-index: 0;
+			font-family: "Gloria Hallelujah", cursive;
 
 			.main {
 				width: 60%;
