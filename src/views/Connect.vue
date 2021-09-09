@@ -3,24 +3,30 @@
 		预约联系
 		<el-tabs v-model="activeName" type="card" @tab-click="handleClick">
 			<el-tab-pane label="合作预约" name="first">
-				<el-form class="form" ref="form" :model="pointment" label-width="80px">
+				<el-form class="form" ref="pointment" :model="pointment" label-width="80px">
 					<el-form-item label="姓名">
-						<el-input v-model="pointment.name"></el-input>
+						<!-- <el-input v-model="pointment.name"></el-input> -->
+						<wired-input v-model="pointment.name" placeholder=""></wired-input>
 					</el-form-item>
 					<el-form-item label="公司">
-						<el-input v-model="pointment.com"></el-input>
+						<!-- <el-input v-model="pointment.com"></el-input> -->
+						<wired-input v-model="pointment.com" placeholder=""></wired-input>
 					</el-form-item>
 					<el-form-item label="电话">
-						<el-input v-model="pointment.tel"></el-input>
+						<!-- <el-input v-model="pointment.tel"></el-input> -->
+						<wired-input v-model="pointment.tel" placeholder=""></wired-input>
 					</el-form-item>
 					<el-form-item label="QQ">
-						<el-input v-model="pointment.qq"></el-input>
+						<!-- <el-input v-model="pointment.qq"></el-input> -->
+						<wired-input v-model="pointment.qq" placeholder=""></wired-input>
 					</el-form-item>
 					<el-form-item label="邮箱">
-						<el-input v-model="pointment.mail"></el-input>
+						<!-- <el-input v-model="pointment.mail"></el-input> -->
+						<wired-input v-model="pointment.mail" placeholder=""></wired-input>
 					</el-form-item>
 					<el-form-item label="合作意向">
-						<el-input type="textarea" v-model="pointment.desc"></el-input>
+						<!-- <el-input type="textarea" v-model="pointment.desc"></el-input> -->
+						<wired-textarea v-model="pointment.desc" placeholder="Enter text" rows="6"></wired-textarea>
 					</el-form-item>
 					<el-form-item label="门店/公司">
 						<el-upload action="https://jsonplaceholder.typicode.com/posts/" list-type="picture-card"
@@ -32,30 +38,30 @@
 						</el-dialog>
 					</el-form-item>
 					<el-form-item>
-						<el-button type="primary" @click="onSubmit">立即创建</el-button>
-						<el-button>取消</el-button>
+						<wired-button elevation="2" v-on:click="onSubmit">立即创建</wired-button>
+						<wired-button elevation="2" v-on:click="">取消</wired-button>
 					</el-form-item>
 				</el-form>
 			</el-tab-pane>
 			<el-tab-pane label="代理商申请" name="second">
-				<el-form class="form" ref="form" :model="pointment" label-width="80px">
+				<el-form class="form" ref="application" :model="application" label-width="80px">
 					<el-form-item label="姓名">
-						<el-input v-model="pointment.name"></el-input>
+						<el-input v-model="application.name"></el-input>
 					</el-form-item>
 					<el-form-item label="公司">
-						<el-input v-model="pointment.com"></el-input>
+						<el-input v-model="application.com"></el-input>
 					</el-form-item>
 					<el-form-item label="电话">
-						<el-input v-model="pointment.tel"></el-input>
+						<el-input v-model="application.tel"></el-input>
 					</el-form-item>
 					<el-form-item label="QQ">
-						<el-input v-model="pointment.qq"></el-input>
+						<el-input v-model="application.qq"></el-input>
 					</el-form-item>
 					<el-form-item label="邮箱">
-						<el-input v-model="pointment.mail"></el-input>
+						<el-input v-model="application.mail"></el-input>
 					</el-form-item>
 					<el-form-item label="合作意向">
-						<el-input type="textarea" v-model="pointment.desc"></el-input>
+						<el-input type="textarea" v-model="application.desc"></el-input>
 					</el-form-item>
 					<el-form-item>
 						<el-button type="primary" @click="onSubmit">立即创建</el-button>
@@ -104,7 +110,7 @@
 				console.log(tab, event);
 			},
 			onSubmit() {
-				console.log('submit!');
+				console.log(this.pointment);
 			},
 			handleRemove(file, fileList) {
 				console.log(file, fileList);
@@ -123,6 +129,7 @@
 		font-size: 25px;
 		font-weight: 600;
 		color: #000000;
+		font-family: "Gloria Hallelujah", cursive;
 
 		.el-tabs__nav {
 			// margin-left: 35%;
@@ -156,6 +163,12 @@
 				&:focus{
 					border: 1px solid #5393e5;
 				}
+			}
+		}
+		.wired-rendered{
+			width: 400px;
+			input{
+				padding: 10px;
 			}
 		}
 	}
