@@ -38,8 +38,8 @@
 						</el-dialog>
 					</el-form-item>
 					<el-form-item>
-						<wired-button elevation="2" v-on:click="onSubmit">立即创建</wired-button>
-						<wired-button elevation="2" v-on:click="">取消</wired-button>
+						<wired-button elevation="1" v-on:click="onSubmit">立即创建</wired-button>
+						<wired-button elevation="1" v-on:click="">取消</wired-button>
 					</el-form-item>
 				</el-form>
 			</el-tab-pane>
@@ -130,6 +130,8 @@
 		font-weight: 600;
 		color: #000000;
 		font-family: "Gloria Hallelujah", cursive;
+		width: 1200px;
+		margin: 0 auto;
 
 		.el-tabs__nav {
 			// margin-left: 35%;
@@ -167,9 +169,9 @@
 		}
 		.wired-rendered{
 			width: 400px;
-			input{
-				padding: 10px;
-			}
+		}
+		.wired-input::part(input){
+			padding: 20px !important;
 		}
 	}
 </style>

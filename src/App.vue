@@ -21,7 +21,9 @@
 		<div class="main">
 			<router-view></router-view>
 		</div>
-		
+		<div class="footer">
+			
+		</div>
 	</div>
 	<!-- <router-view /> -->
 </template>
@@ -49,11 +51,15 @@
 	}
 
 	#index {
+		position: relative;
+		height: 5000px;
 		.navigation-container {
 			display: flex;
 			position: fixed;
+			// position: sticky;
 			top: 25px;
 			left: 180px;
+			z-index: 100;
 		}
 
 		.navigation-item {
@@ -85,9 +91,15 @@
 		}
 		
 		.main{
-			background-color: rgba(255,255,255,.5);
-			width: 1200px;
-			margin: 0 auto;
+			// background-color: rgba(255,255,255,.5);
+			// width: 1200px;
+		}
+		.footer{
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: 1000px;
+			background-color: #80d9ff;
 		}
 	}
 </style>

@@ -1,29 +1,110 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-		<!-- <el-container>
-		  <el-header>Header</el-header>
-		  <el-container>
-		    <el-aside width="200px">Aside</el-aside>
-		    <el-container>
-		      <el-main>Main</el-main>
-		      <el-footer>Footer</el-footer>
-		    </el-container>
-		  </el-container>
-		</el-container> -->
-  </div>
+	<div class="home">
+		<div class="home-head">
+			<img src="../assets/bgimg/frame_b.png" class="bottom-img">
+		</div>
+		<div class="home-body">
+			<div class="body-content">
+				<div class="content-left">
+					<img-container>
+						<template v-slot:photo>
+							<img src="../assets/game_img/heartstone.gif">
+						</template>
+						<template v-slot:left-text>
+							<div>
+								<h2>炉石传说</h2>
+								<p>
+									《炉石传说》（英语：Hearthstone，香港和台湾译作“炉石战记”，香港和台湾旧译“炉石战记：魔兽英雄传”，中国大陆旧译“炉石传说：魔兽英雄传”）是暴雪娱乐发行的一款集换式卡牌游戏[2][3]。由暴雪员工RobPardo在2013年3月的PAX2013公布。[4]游戏在2013年夏进入Beta测试。2014年1月24日进入公测阶段[5]。2014年3月13日，欧、亚、美三个服务器正式运营，中国服务器也于3月15日正式运营。该游戏是一款免费游戏，故事背景基于魔兽系列的世界观，玩家可以另行购买卡牌包
+								</p>
+							</div>
+						</template>
+					</img-container>
+					<img-container>
+						<template v-slot:photo>
+							<img src="../assets/game_img/heartstone.gif">
+						</template>
+						<template v-slot:left-text>
+							<div>
+								<h2>炉石传说</h2>
+								<p>
+									《炉石传说》（英语：Hearthstone，香港和台湾译作“炉石战记”，香港和台湾旧译“炉石战记：魔兽英雄传”，中国大陆旧译“炉石传说：魔兽英雄传”）是暴雪娱乐发行的一款集换式卡牌游戏[2][3]。由暴雪员工RobPardo在2013年3月的PAX2013公布。[4]游戏在2013年夏进入Beta测试。2014年1月24日进入公测阶段[5]。2014年3月13日，欧、亚、美三个服务器正式运营，中国服务器也于3月15日正式运营。该游戏是一款免费游戏，故事背景基于魔兽系列的世界观，玩家可以另行购买卡牌包
+								</p>
+							</div>
+						</template>
+					</img-container>
+				</div>
+				<div class="content-right">
+					<img-container>
+						<template v-slot:photo>
+							<img src="../assets/game_img/heartstone.gif">
+						</template>
+						<template v-slot:right-text>
+							<div>
+								<h2>炉石传说</h2>
+								<p>
+									《炉石传说》（英语：Hearthstone，香港和台湾译作“炉石战记”，香港和台湾旧译“炉石战记：魔兽英雄传”，中国大陆旧译“炉石传说：魔兽英雄传”）是暴雪娱乐发行的一款集换式卡牌游戏[2][3]。由暴雪员工RobPardo在2013年3月的PAX2013公布。[4]游戏在2013年夏进入Beta测试。2014年1月24日进入公测阶段[5]。2014年3月13日，欧、亚、美三个服务器正式运营，中国服务器也于3月15日正式运营。该游戏是一款免费游戏，故事背景基于魔兽系列的世界观，玩家可以另行购买卡牌包
+								</p>
+							</div>
+						</template>
+					</img-container>
+					<img-container>
+						<template v-slot:photo>
+							<img src="../assets/game_img/heartstone.gif">
+						</template>
+						<template v-slot:right-text>
+							<div>
+								<h2>炉石传说</h2>
+								<p>
+									《炉石传说》（英语：Hearthstone，香港和台湾译作“炉石战记”，香港和台湾旧译“炉石战记：魔兽英雄传”，中国大陆旧译“炉石传说：魔兽英雄传”）是暴雪娱乐发行的一款集换式卡牌游戏[2][3]。由暴雪员工RobPardo在2013年3月的PAX2013公布。[4]游戏在2013年夏进入Beta测试。2014年1月24日进入公测阶段[5]。2014年3月13日，欧、亚、美三个服务器正式运营，中国服务器也于3月15日正式运营。该游戏是一款免费游戏，故事背景基于魔兽系列的世界观，玩家可以另行购买卡牌包
+								</p>
+							</div>
+						</template>
+					</img-container>
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>
-// @ is an alias to /src
+	// @ is an alias to /src
+	import imgContainer from '../components/img-container.vue'
 
-
-export default {
-  name: 'Home',
-  components: {}
-}
+	export default {
+		name: 'Home',
+		components: {
+			imgContainer
+		}
+	}
 </script>
 <style lang="scss">
-	
+	.home {
+		// position: relative;
+		font-family: "楷体", "楷体_GB2312";
+	}
+
+	.home-head {
+		width: 100%;
+		height: 1000px;
+		position: relative;
+		background: url(../assets/bgimg/初号机.png);
+	}
+
+	.bottom-img {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+
+	.home-body {
+		width: 100%;
+		height: 200px;
+	}
+
+	.body-content {
+		padding-top: 100px;
+		display: flex;
+		width: 60%;
+		margin: 0 auto;
+	}
 </style>
