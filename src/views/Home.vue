@@ -115,7 +115,8 @@
 		width: 100%;
 		height: 1000px;
 		position: relative;
-		background: url(../assets/bgimg/初号机.png);
+		// background: url(../assets/bgimg/初号机.png);
+		background: url(../assets/bgimg/bg.jpg);
 	}
 
 	.bottom-img {
@@ -126,7 +127,8 @@
 
 	.home-body {
 		width: 100%;
-		height: 200px;
+		// height: 200px;
+		margin-bottom: 100px;
 	}
 
 	.body-content {

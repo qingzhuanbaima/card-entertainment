@@ -22,7 +22,15 @@
 			<router-view></router-view>
 		</div>
 		<div class="footer">
-			
+			<img src="./assets/bgimg/frame_b.png" style="transform: rotateZ(180deg);width: 100%;">
+			<img src="./assets/bgimg/bg.jpg" class="footer-img">
+			<div class="footer-text">
+				<h1>底部标题</h1>
+				<p>我是描述</p>
+				<p>我是描述</p>
+				<p>我是描述</p>
+			</div>
+
 		</div>
 	</div>
 	<!-- <router-view /> -->
@@ -52,7 +60,8 @@
 
 	#index {
 		position: relative;
-		height: 5000px;
+
+		// height: 5000px;
 		.navigation-container {
 			display: flex;
 			position: fixed;
@@ -60,11 +69,13 @@
 			top: 25px;
 			left: 180px;
 			z-index: 100;
+			color: #ffffff;
 		}
 
 		.navigation-item {
 			flex: 1;
 			cursor: pointer;
+
 			&:hover {
 				transform: scale(1.1);
 				transform-origin: top;
@@ -89,17 +100,31 @@
 				line-height: 18px;
 			}
 		}
-		
-		.main{
+
+		.main {
 			// background-color: rgba(255,255,255,.5);
 			// width: 1200px;
 		}
-		.footer{
-			position: absolute;
-			bottom: 0;
+
+		.footer {
+			// position: absolute;
+			// bottom: 0;
 			width: 100%;
-			height: 1000px;
-			background-color: #80d9ff;
+			height: 1100px;
+			// background: url(assets/bgimg/bg.jpg);
+			background: url(assets/bgimg/初号机.png);
+			text-align: center;
+		}
+
+		.footer-img {
+			display: block;
+			width: 500px;
+			margin: 0 auto;
+			margin-top: 100px;
+			// height: 400px;
+		}
+		.footer-text{
+			margin-top: 100px;
 		}
 	}
 </style>
