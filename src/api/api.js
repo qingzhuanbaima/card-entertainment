@@ -14,7 +14,7 @@ import axios from 'axios'
 //     loading.close()
 // }
 const service = axios.create({
-	baseURL: 'https://yesno.wtf/',
+	baseURL: 'http://192.168.0.85:8088/',
 	timeout: 5000 // 请求超时时间
 })
 
